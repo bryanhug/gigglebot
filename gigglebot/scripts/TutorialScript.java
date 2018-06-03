@@ -1,14 +1,15 @@
-package intro.tutorial;
-
+package scripts;
 import org.tribot.script.Script;
 import org.tribot.api2007.*;
+import org.tribot.api2007.NPCChat;
+
 import org.tribot.api.*;
 import org.tribot.api.types.generic.Condition; 
 import org.tribot.api2007.types.*;
 import org.tribot.script.ScriptManifest;
 
 
-@ScriptManifest(authors = { "gigglez" }, category = "Woodcutting", name = "Basic Willow Cutter", version = 1.00, description = "Cuts and banks willows in Draynor.", gameMode = 1)
+@ScriptManifest(authors = { "gigglez" }, category = "Woodcutting", name = "Basic tree Cutter", version = 1.00, description = "Cuts and banks trees in Draynor.", gameMode = 1)
 
 public class TutorialScript extends Script {
 
@@ -29,7 +30,7 @@ public class TutorialScript extends Script {
         // don't have to null check it.		
         // Next, we check the length of the array. If the length is less than 1,	
         // we know that no trees were found. We can now return false.
-        final RSObject[] willows = Objects.findNearest(20, "Willow");
+        final RSObject[] willows = Objects.findNearest(20, "Tree");
         if (willows.length < 1)
             return false;
         // The array contains at least one element. The first element in the
@@ -75,8 +76,9 @@ public class TutorialScript extends Script {
             // current time plus somewhere between 60 and 90 seconds. We use
             // randomness to avoid seeming bot-like.
             while (isCutting() && System.currentTimeMillis() < timeout) {
-                sleep(100, 150); // We will loop while we are cutting, and while the current time			
-                // is before the timeout. Make sure to have a sleep to prevent a	CPU overload.				
+                sleep(100, 150); 
+                // We will loop while we are cutting, and while the current time			
+                // is before the timeout. Make sure to have a sleep to prevent a CPU overload.				
                 // TODO: We could also implement some anti-ban features here if we	
                 // want.			
                 // Now, let's check if the willow tree is still at the location	
@@ -89,70 +91,73 @@ public class TutorialScript extends Script {
                 // Pointer Exception will be thrown, crashing the script.	
                 if (this.last_tree_tile != null) {
                     // The variable is not null. We can use it now.			
-                    if (!Objects.isAt(this.last_tree_tile, "Willow")) {
+                    if (!Objects.isAt(this.last_tree_tile, "Tree")) {
                         // The willow tree is gone. It has either been chopped		
                         // down, or turned into an ent. Let's break out of this		
                         // loop.	
                         break;
                     }
                 }
-        }
+            }//while
+        }//isCutting
 
-    }//cut
+        final RSObject[] trees = Objects.findNearest(100, "Tree");
 
-
-    // Let's go find a tree to chop.
-    final RSObject[] trees = Objects.findNearest(50, "Willow");
-    // Search for the willow within 50	tiles
-    if (trees.length < 1)
-        return false; // No trees have been found. We can't do anything.
-    if (!trees[0].isOnScreen()) {
-        // The nearest tree is not on the screen. Let's walk to it.	
-        if (!Walking.walkPath(Walking.generateStraightPath(trees[0]))) 
-            // We could not walk to the tree. Let's exit so we don't try	
-            // clicking a tree which isn't on screen.
+        if (trees.length < 1)
             return false;
+        if (!trees[0].isOnScreen()) {
+            if (!Walking.walkPath(Walking.generateStraightPath(trees[0]))) 
+                // We could not walk to the tree. Let's exit so we don't try	
+                // clicking a tree which isn't on screen.
+                return false;
 
-    if (!Timing.waitCondition(new Condition() { 
-        // We will now use the Timing API to wait until the tree is on	
-        // the screen (we are probably walking to the tree right now).	
-        @Override
-        public boolean active() {
-            General.sleep(100); // Sleep to reduce CPU usage.
-            return trees[0].isOnScreen();
+            if (!Timing.waitCondition(new Condition() { 
+                // We will now use the Timing API to wait until the tree is on	
+                // the screen (we are probably walking to the tree right now).	
+                @Override
+                public boolean active() {
+                    General.sleep(100); // Sleep to reduce CPU usage.
+                    return trees[0].isOnScreen();
+                }
+            }, General.random(8000, 9300)))
+                // A tree could not be found before the timeout of 8-9.3	
+                // seconds. Let's exit the method and return false. we don't		
+                // want to end up trying to click a tree which isn't on the
+                // screen.		
+            return false;
         }
-        }, General.random(8000, 9300)))
-        // A tree could not be found before the timeout of 8-9.3	
-        // seconds. Let's exit the method and return false. we don't		
-        // want to end up trying to click a tree which isn't on the
-        // screen.		
-        return false;
-    }
 
-    // Okay, now we are sure trees[0] is on-screen. Let's click it. We may	
-    // be still moving at this moment, so let's use DynamicClicking.		
-    // DynamicClicking should be used when your character is moving, or the	
-    // target is moving, and you need to click the target.	
-    if (!DynamicClicking.clickRSObject(trees[0], "Chop down")) 
-        // We could not click the tree. Let's exit the method since we		
-        // failed.
-        return false;
-    // We clicked the tree. Let's first wait to stop chopping for 1-1.2	
-    // seconds just in case we moved on to this tree while still performing		
-    // the chopping animation.	
-    Timing.waitCondition(new Condition() {
-        @Override
-        public boolean active() {
-            return !isCutting();
-        }
-    }, General.random(1000, 1200));
-    // We don't need to if check it since the result doesn't matter.		
-    if (Timing.waitCondition(new Condition() {
-        // Now let's wait until we are cutting.			
-        @Override
-        public boolean active() {
-            return isCutting();
-        }
+        // Okay, now we are sure trees[0] is on-screen. Let's click it. We may	
+        // be still moving at this moment, so let's use DynamicClicking.		
+        // DynamicClicking should be used when your character is moving, or the	
+        // target is moving, and you need to click the target.	
+        if (!DynamicClicking.clickRSObject(trees[0], "Chop down")) 
+            // We could not click the tree. Let's exit the method since we		
+            // failed.
+            return false;
+        // We clicked the tree. Let's first wait to stop chopping for 1-1.2	
+        // seconds just in case we moved on to this tree while still performing		
+        // the chopping animation.	
+        Timing.waitCondition(new Condition() {
+            @Override
+            public boolean active() {
+                return !isCutting();
+            }
+        }, General.random(1000, 1200));
+
+
+        
+
+
+        // clickContinue(false); // click continue if we level up
+
+        // We don't need to if check it since the result doesn't matter.		
+        if (Timing.waitCondition(new Condition() {
+            // Now let's wait until we are cutting.			
+            @Override
+            public boolean active() {
+                return isCutting();
+            }
         }, General.random(8000, 9000))) {
             // We are cutting! Now let's record the tree's tile and return true.			
             this.last_tree_tile = trees[0].getPosition().clone(); 
@@ -188,9 +193,18 @@ public class TutorialScript extends Script {
     }
 
     private boolean walkToTrees() {
-        final RSObject[] willows = Objects.findNearest(50, "Willow");
-        if (willows.length < 1) // No willows could be found. We cannot do anything. Let's exit this				
+        final RSObject[] willows = Objects.findNearest(100, "Tree");
+        if (willows.length < 1) {
+            if (isInBank()) { // We are on the second level of the bank
+                final RSObject[] stairs = Objects.findNearest(50, "Staircase");
+                // Let's walk to the stairs and go down
+                WebWalking.walkTo(stairs[0]);
+            }
             return false;
+        } // No willows could be found. We cannot do anything. Let's exit this				
+
+        
+
         // Let's walk to the closest willow tree now.	
         if (!WebWalking.walkTo(willows[0]))
         // We failed to walk to the bank. Let's return false.	
@@ -204,7 +218,7 @@ public class TutorialScript extends Script {
             return isAtTrees();
         }
         }, General.random(8000, 9000));
-    }
+    }//walkToTrees
 
     private boolean bank() {
 
@@ -242,7 +256,7 @@ public class TutorialScript extends Script {
         else {
             if (Banking.depositAll() < 1)
             // We failed to click the deposit all button. Let's exit and return false.	
-            return false;
+                return false;
         }
        // Okay, our items should get deposited. Let's wait and make sure they
        // get deposited.		
@@ -251,7 +265,7 @@ public class TutorialScript extends Script {
                                                      // before the timeout, return true. Otherwise, return false.		
             @Override
             public boolean active() {
-            return !Inventory.isFull();
+                return !Inventory.isFull();
             }
         }, General.random(3000, 4000));
     }//bank
@@ -263,27 +277,27 @@ public class TutorialScript extends Script {
             sleep(50);
             
             if (isAtTrees()) {	
-            if (Inventory.isFull()) { // The inventory is full	
-                walkToBank(); // Let's walk to the bank			
-            } 
-            else // The inventory is not full	
-                cut(); // Let's cut the willows.	
+                if (Inventory.isFull()) { // The inventory is full	
+                    walkToBank(); // Let's walk to the bank			
+                } 
+                else // The inventory is not full	
+                    cut(); // Let's cut the willows.	
             }
             else if (isInBank()) { // We are at the bank	
             // Time to check what to do. If the inventory is full, we should	
             // bank the items. Otherwise, we should walk back to the trees.		
-            if (Inventory.isFull())      
-                bank();
-            else
-                walkToTrees();
+                if (Inventory.isFull())      
+                    bank();
+                else
+                    walkToTrees();
             } 
             else { // We are neither in the bank, nor at the willows		
                 // Time to check what to do. If the inventory is full, we will	
                 // walk to the bank. Otherwise, we will walk to the willows.	
-            if (Inventory.isFull())
-                walkToBank();		
-            else
-                walkToTrees();
+                if (Inventory.isFull())
+                    walkToBank();		
+                else
+                    walkToTrees();
             }
         }//while 
     }//run
