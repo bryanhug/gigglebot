@@ -107,8 +107,6 @@ public class TutorialScript extends Script {
             return false;
         if (!trees[0].isOnScreen()) {
             if (!Walking.walkPath(Walking.generateStraightPath(trees[0]))) 
-                // We could not walk to the tree. Let's exit so we don't try	
-                // clicking a tree which isn't on screen.
                 return false;
 
             if (!Timing.waitCondition(new Condition() { 
@@ -145,11 +143,11 @@ public class TutorialScript extends Script {
             }
         }, General.random(1000, 1200));
 
-
         
-
-
-        // clickContinue(false); // click continue if we level up
+        RSInterfaceChild LevelUp = getClickContinueInterface();
+        if (LevelUp != null)
+            LevelUp.clickContinue(false); // click continue if we level up
+        
 
         // We don't need to if check it since the result doesn't matter.		
         if (Timing.waitCondition(new Condition() {
