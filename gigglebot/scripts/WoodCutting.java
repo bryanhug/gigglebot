@@ -15,6 +15,27 @@ public class WoodCutting extends Script {
 
     private RSTile last_tree_tile;
 
+    private RSArea farmZone(
+        RSTile(3186,3468,0),
+        RSTile(3144,3468,0),
+        RSTile(3139,3473,0),
+        RSTile(3139,3481,0),
+        RSTile(3142,3484,0),
+        RSTile(3142,3491,0),
+        RSTile(3139,3495,0),
+        RSTile(3139,3512,0),
+        RSTile(3143,3516,0),
+        RSTile(3157,3516,0),
+        RSTile(3160,3513,0),
+        RSTile(3167,3513,0),
+        RSTile(3171,3516,0),
+        RSTile(3188,3516,0),
+        RSTile(3196,3507,0),
+        RSTile(3189,3497,0),
+        RSTile(3189,3479,0),
+        RSTile(3186,3476,0)
+    );
+
     private boolean isAtTrees() {
         // TODO: Change functionality to go to trees in an area
         final RSObject[] willows = Objects.findNearest(20, "Tree");
