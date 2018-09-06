@@ -15,34 +15,33 @@ public class WoodCutting extends Script {
 
     private RSTile last_tree_tile;
 
-    private RSArea farmZone(
-        RSTile(3186,3468,0),
-        RSTile(3144,3468,0),
-        RSTile(3139,3473,0),
-        RSTile(3139,3481,0),
-        RSTile(3142,3484,0),
-        RSTile(3142,3491,0),
-        RSTile(3139,3495,0),
-        RSTile(3139,3512,0),
-        RSTile(3143,3516,0),
-        RSTile(3157,3516,0),
-        RSTile(3160,3513,0),
-        RSTile(3167,3513,0),
-        RSTile(3171,3516,0),
-        RSTile(3188,3516,0),
-        RSTile(3196,3507,0),
-        RSTile(3189,3497,0),
-        RSTile(3189,3479,0),
-        RSTile(3186,3476,0)
-    );
+    private RSTile[] townSquare = new RSTile[]{
+        new RSTile(3186,3468,0),
+        new RSTile(3144,3468,0),
+        new RSTile(3139,3473,0),
+        new RSTile(3139,3481,0),
+        new RSTile(3142,3484,0),
+        new RSTile(3142,3491,0),
+        new RSTile(3139,3495,0),
+        new RSTile(3139,3512,0),
+        new RSTile(3143,3516,0),
+        new RSTile(3157,3516,0),
+        new RSTile(3160,3513,0),
+        new RSTile(3167,3513,0),
+        new RSTile(3171,3516,0),
+        new RSTile(3188,3516,0),
+        new RSTile(3196,3507,0),
+        new RSTile(3189,3497,0),
+        new RSTile(3189,3479,0),
+        new RSTile(3186,3476,0)
+    };
+
+    private RSArea farmZone = new RSArea(townSquare);
 
     private boolean isAtTrees() {
         // TODO: Change functionality to go to trees in an area
-        final RSObject[] willows = Objects.findNearest(20, "Tree");
-        if (willows.length < 1)
-            return false;
-
-        return willows[0].isOnScreen();    
+        final RSTile playerLoc = Player.getPosition();
+        return farmZone.contains(playerLoc);
     }//isAtTrees
 
     private boolean isInBank() {
@@ -102,10 +101,10 @@ public class WoodCutting extends Script {
             }
         }, General.random(1000, 1200));
 
-        
-        RSInterfaceChild LevelUp = getClickContinueInterface();
-        if (LevelUp != null)
-            LevelUp.clickContinue(false); // click continue if we level up
+        //TODO: add functionality to get rid of level up menu
+        // RSInterfaceChild LevelUp = getClickContinueInterface();
+        // if (LevelUp != null)
+        //     LevelUp.clickContinue(false); // click continue if we level up
         
 
         if (Timing.waitCondition(new Condition() {
@@ -140,26 +139,17 @@ public class WoodCutting extends Script {
     private boolean walkToTrees() {
         // TODO: Change functionality to walk to trees in the given are and chop there
         // TODO: Add functionality for being on the second level of bank
+        final RSTile destination = farmZone.getRandomTile();			
 
-        final RSObject[] willows = Objects.findNearest(100, "Tree");
-        if (willows.length < 1) {
-            if (isInBank()) { // We are on the second level of the bank
-                final RSObject[] stairs = Objects.findNearest(50, "Staircase");
-                // Let's walk to the stairs and go down
-                WebWalking.walkTo(stairs[0]);
-            }
-            return false;
-        } // No willows could be found. We cannot do anything. Let's exit this				
-
-        if (!WebWalking.walkTo(willows[0]))
+        if (!WebWalking.walkTo(destination))
             return false;
 		
         return Timing.waitCondition(new Condition() { // If we reach the trees before the timeout, this method will return	
                                                       // true. Otherwise, it will return false.	
-        @Override public boolean active() {
-        General.sleep(200, 300); // Reduces CPU usage.	
-            return isAtTrees();
-        }
+            @Override public boolean active() {
+                General.sleep(200, 300); // Reduces CPU usage.	
+                return isAtTrees();
+            }
         }, General.random(8000, 9000));
     }//walkToTrees
 
