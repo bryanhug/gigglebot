@@ -1,0 +1,389 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="a5fe1bf8-a2aa-4ace-b6df-42ad8a140d21" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/CannonBall.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CannonBall.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/CannonBall/scripts/CannonBall$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/CannonBall/scripts/CannonBall$2.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/CannonBall/scripts/CannonBall$3.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/CannonBall/scripts/CannonBall$4.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/CannonBall/scripts/CannonBall$5.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/CannonBall/scripts/CannonBall.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/scripts/CannonBall.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../WoodCutting/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../WoodCutting/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../WoodCutting/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../WoodCutting/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../WoodCutting/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../WoodCutting/WoodCutting.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../WoodCutting/out/production/WoodCutting/scripts/WoodCutting$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../WoodCutting/out/production/WoodCutting/scripts/WoodCutting$2.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../WoodCutting/out/production/WoodCutting/scripts/WoodCutting$3.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../WoodCutting/out/production/WoodCutting/scripts/WoodCutting$4.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../WoodCutting/out/production/WoodCutting/scripts/WoodCutting$5.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../WoodCutting/out/production/WoodCutting/scripts/WoodCutting$6.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../WoodCutting/out/production/WoodCutting/scripts/WoodCutting.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TRiBot.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../scripts/WoodCutting.java" beforeDir="false" afterPath="$PROJECT_DIR$/../WoodCutting/src/scripts/WoodCutting.java" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/CannonBall$Tribot.ic" NAME="Tribot Coverage Results" MODIFIED="1537902851766" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+  </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="-1433001695">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.open.time.2" value="1" />
+          <entry key="project.opened" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="class" value="6" />
+          <entry key="java" value="4" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="CLASS" value="6" />
+          <entry key="JAVA" value="4" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="java" value="1739" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="JAVA" value="1739" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="CannonBall" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/scripts/CannonBall.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="816">
+              <caret line="48" column="27" lean-forward="true" selection-start-line="48" selection-start-column="27" selection-end-line="48" selection-end-column="27" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1980#2224#0" expanded="true" />
+                <element signature="e#2223#2224#0" expanded="true" />
+                <element signature="e#2576#2715#0" expanded="true" />
+                <element signature="e#2714#2715#0" expanded="true" />
+                <element signature="e#3013#3014#0" expanded="true" />
+                <element signature="e#3061#3062#0" expanded="true" />
+                <element signature="e#4665#4976#0" expanded="true" />
+                <element signature="e#4975#4976#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/scripts/CannonBall.java" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-7" />
+    <option name="width" value="974" />
+    <option name="height" value="1047" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="AndroidView" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="CannonBall" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CannonBall" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CannonBall" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CannonBall" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CannonBall" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CannonBall" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="scripts" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1538027031429" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../WoodCutting" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="Tribot" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="org.tribot.TRiBot" />
+      <module name="CannonBall" />
+      <option name="PROGRAM_PARAMETERS" value="SID6ca92-Z5PeHMUOAyODenPcM6fxySYH6hVqjYy3sApVDqn4MzHHTQPD4 MEM385 OLDSCHOOL " />
+      <option name="VM_PARAMETERS" value="-Xmx386m -Xss2m -Dsun.java2d.noddraw=true -XX:CompileThreshold=1500 -Xincgc -XX:+UseConcMarkSweepGC -XX:+UseParNewGC -Xbootclasspath/p:&quot;C:\Users\Bryan\AppData\Roaming\.tribot\dependancies\xboot860.jar&quot; -classpath &quot;C:\Program Files\Java\jdk1.8.0_101\lib\tools.jar&quot;;&quot;C:\Users\Bryan\AppData\Roaming\.tribot\bin&quot;;&quot;C:\Users\Bryan\AppData\Roaming\.tribot\dependancies\substance.jar&quot;;&quot;C:\Users\Bryan\AppData\Roaming\.tribot\dependancies\trident.jar&quot;;&quot;C:\Users\Bryan\AppData\Roaming\.tribot\dependancies\TRiBot.jar&quot;; " />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a5fe1bf8-a2aa-4ace-b6df-42ad8a140d21" name="Default Changelist" comment="" />
+      <created>1537293474717</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1537293474717</updated>
+      <workItem from="1537293476637" duration="33232000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="33232000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-7" y="0" width="974" height="1047" extended-state="0" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Image Layers" />
+      <window_info id="Designer" />
+      <window_info id="UI Designer" />
+      <window_info id="Capture Tool" />
+      <window_info id="Favorites" sideWeight="0.5007194" side_tool="true" weight="0.23217922" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49928057" visible="true" weight="0.24945295" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Messages" sideWeight="0.4989059" weight="0.32968238" />
+      <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Terminal" weight="0.32968238" />
+      <window_info anchor="bottom" id="Event Log" sideWeight="0.5010941" side_tool="true" weight="0.39978093" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3264642" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.4989059" weight="0.23877327" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="right" id="Palette" />
+      <window_info anchor="right" id="Coverage" side_tool="true" />
+      <window_info anchor="right" id="Theme Preview" />
+      <window_info anchor="right" id="Capture Analysis" />
+      <window_info anchor="right" id="Palette&#9;" />
+      <window_info anchor="right" id="Database" />
+      <window_info anchor="right" id="Maven Projects" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints-defaults>
+        <breakpoint suspend="THREAD" type="java-line" />
+      </breakpoints-defaults>
+    </breakpoint-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="jar://$USER_HOME$/AppData/Roaming/.tribot/dependancies/TRiBot.jar!/org/tribot/api2007/Inventory.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="489">
+          <caret line="56" selection-start-line="56" selection-end-line="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/AppData/Roaming/.tribot/dependancies/TRiBot.jar!/org/tribot/api2007/Banking.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="503">
+          <caret line="110" selection-start-line="110" selection-end-line="110" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/AppData/Roaming/.tribot/dependancies/TRiBot.jar!/org/tribot/api2007/types/RSObject.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="531">
+          <caret line="79" selection-start-line="79" selection-end-line="79" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/jre/lib/rt.jar!/sun/misc/Unsafe.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="613">
+          <caret line="332" column="23" selection-start-line="332" selection-start-column="23" selection-end-line="332" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/scripts/CannonBall.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="816">
+          <caret line="48" column="27" lean-forward="true" selection-start-line="48" selection-start-column="27" selection-end-line="48" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1980#2224#0" expanded="true" />
+            <element signature="e#2223#2224#0" expanded="true" />
+            <element signature="e#2576#2715#0" expanded="true" />
+            <element signature="e#2714#2715#0" expanded="true" />
+            <element signature="e#3013#3014#0" expanded="true" />
+            <element signature="e#3061#3062#0" expanded="true" />
+            <element signature="e#4665#4976#0" expanded="true" />
+            <element signature="e#4975#4976#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>No facets are configured</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>CannonBall</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>
